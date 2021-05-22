@@ -17,5 +17,24 @@ namespace Tic_Tac_Toe_Game
             InitializeComponent();
         }
 
+        private void TicTacToe_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void prgrssBr1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tmr1_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
