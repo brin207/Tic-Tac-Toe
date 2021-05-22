@@ -29,6 +29,7 @@ namespace Tic_Tac_Toe_Game
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TicTacToe));
             this.SuspendLayout();
             // 
             // TicTacToe
@@ -36,6 +37,7 @@ namespace Tic_Tac_Toe_Game
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TicTacToe";
             this.Text = "Tic-Tac-Toe";
             this.ResumeLayout(false);
