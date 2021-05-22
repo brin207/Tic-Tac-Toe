@@ -45,6 +45,7 @@ namespace Tic_Tac_Toe_Game
             this.btnStart = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnQuit = new System.Windows.Forms.Button();
+            this.btnRstrt = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn1_1
@@ -144,7 +145,7 @@ namespace Tic_Tac_Toe_Game
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(177, 215);
+            this.btnStart.Location = new System.Drawing.Point(168, 213);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(93, 48);
             this.btnStart.TabIndex = 10;
@@ -162,7 +163,7 @@ namespace Tic_Tac_Toe_Game
             // 
             // btnQuit
             // 
-            this.btnQuit.Location = new System.Drawing.Point(177, 267);
+            this.btnQuit.Location = new System.Drawing.Point(222, 267);
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(93, 48);
             this.btnQuit.TabIndex = 12;
@@ -170,11 +171,21 @@ namespace Tic_Tac_Toe_Game
             this.btnQuit.UseVisualStyleBackColor = true;
             this.btnQuit.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnRstrt
+            // 
+            this.btnRstrt.Location = new System.Drawing.Point(123, 267);
+            this.btnRstrt.Name = "btnRstrt";
+            this.btnRstrt.Size = new System.Drawing.Size(93, 48);
+            this.btnRstrt.TabIndex = 13;
+            this.btnRstrt.Text = "Restart Game";
+            this.btnRstrt.UseVisualStyleBackColor = true;
+            // 
             // TicTacToe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 514);
+            this.Controls.Add(this.btnRstrt);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnStart);
@@ -213,6 +224,7 @@ namespace Tic_Tac_Toe_Game
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnQuit;
+        private System.Windows.Forms.Button btnRstrt;
     }
 }
 
