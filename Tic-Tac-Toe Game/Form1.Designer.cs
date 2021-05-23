@@ -41,11 +41,11 @@ namespace Tic_Tac_Toe_Game
             this.btn2_3 = new System.Windows.Forms.Button();
             this.btn3_3 = new System.Windows.Forms.Button();
             this.tmr1 = new System.Windows.Forms.Timer(this.components);
-            this.prgrssBr1 = new System.Windows.Forms.ProgressBar();
+            this.prgrssBar1 = new System.Windows.Forms.ProgressBar();
             this.btnStart = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBox1 = new System.Windows.Forms.TextBox();
             this.btnQuit = new System.Windows.Forms.Button();
-            this.btnRstrt = new System.Windows.Forms.Button();
+            this.btnRestart = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn1_1
@@ -133,15 +133,15 @@ namespace Tic_Tac_Toe_Game
             // 
             this.tmr1.Tick += new System.EventHandler(this.tmr1_Tick);
             // 
-            // prgrssBr1
+            // prgrssBar1
             // 
-            this.prgrssBr1.Location = new System.Drawing.Point(582, 451);
-            this.prgrssBr1.Name = "prgrssBr1";
-            this.prgrssBr1.Size = new System.Drawing.Size(100, 29);
-            this.prgrssBr1.Step = -10;
-            this.prgrssBr1.TabIndex = 9;
-            this.prgrssBr1.Value = 100;
-            this.prgrssBr1.Click += new System.EventHandler(this.prgrssBr1_Click);
+            this.prgrssBar1.Location = new System.Drawing.Point(582, 451);
+            this.prgrssBar1.Name = "prgrssBar1";
+            this.prgrssBar1.Size = new System.Drawing.Size(100, 29);
+            this.prgrssBar1.Step = -10;
+            this.prgrssBar1.TabIndex = 9;
+            this.prgrssBar1.Value = 100;
+            this.prgrssBar1.Click += new System.EventHandler(this.prgrssBr1_Click);
             // 
             // btnStart
             // 
@@ -151,15 +151,16 @@ namespace Tic_Tac_Toe_Game
             this.btnStart.TabIndex = 10;
             this.btnStart.Text = "Start Game";
             this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
-            // textBox1
+            // txtBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(476, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(312, 34);
-            this.textBox1.TabIndex = 11;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBox1.Location = new System.Drawing.Point(476, 41);
+            this.txtBox1.Name = "txtBox1";
+            this.txtBox1.Size = new System.Drawing.Size(312, 34);
+            this.txtBox1.TabIndex = 11;
+            this.txtBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnQuit
             // 
@@ -171,25 +172,25 @@ namespace Tic_Tac_Toe_Game
             this.btnQuit.UseVisualStyleBackColor = true;
             this.btnQuit.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnRstrt
+            // btnRestart
             // 
-            this.btnRstrt.Location = new System.Drawing.Point(123, 267);
-            this.btnRstrt.Name = "btnRstrt";
-            this.btnRstrt.Size = new System.Drawing.Size(93, 48);
-            this.btnRstrt.TabIndex = 13;
-            this.btnRstrt.Text = "Restart Game";
-            this.btnRstrt.UseVisualStyleBackColor = true;
+            this.btnRestart.Location = new System.Drawing.Point(123, 267);
+            this.btnRestart.Name = "btnRestart";
+            this.btnRestart.Size = new System.Drawing.Size(93, 48);
+            this.btnRestart.TabIndex = 13;
+            this.btnRestart.Text = "Restart Game";
+            this.btnRestart.UseVisualStyleBackColor = true;
             // 
             // TicTacToe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 514);
-            this.Controls.Add(this.btnRstrt);
+            this.Controls.Add(this.btnRestart);
             this.Controls.Add(this.btnQuit);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBox1);
             this.Controls.Add(this.btnStart);
-            this.Controls.Add(this.prgrssBr1);
+            this.Controls.Add(this.prgrssBar1);
             this.Controls.Add(this.btn3_3);
             this.Controls.Add(this.btn2_3);
             this.Controls.Add(this.btn1_3);
@@ -220,11 +221,11 @@ namespace Tic_Tac_Toe_Game
         private System.Windows.Forms.Button btn2_3;
         private System.Windows.Forms.Button btn3_3;
         private System.Windows.Forms.Timer tmr1;
-        private System.Windows.Forms.ProgressBar prgrssBr1;
+        private System.Windows.Forms.ProgressBar prgrssBar1;
         private System.Windows.Forms.Button btnStart;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBox1;
         private System.Windows.Forms.Button btnQuit;
-        private System.Windows.Forms.Button btnRstrt;
+        private System.Windows.Forms.Button btnRestart;
     }
 }
 

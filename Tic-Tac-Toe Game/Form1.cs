@@ -29,12 +29,32 @@ namespace Tic_Tac_Toe_Game
 
         private void tmr1_Tick(object sender, EventArgs e)
         {
+            if (prgrssBar1.Value > prgrssBar1.Minimum){
 
+                prgrssBar1.PerformStep();
+            }
+            if (prgrssBar1.Value == prgrssBar1.Minimum)
+            {
+
+                prgrssBar1.Value = 100;
+                tmr1.Stop();
+                DialogResult result = MessageBox.Show("Time is up!");
+                if (result == DialogResult.OK){
+
+                    tmr1.Start();
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            tmr1.Start();
+            tmr1.Interval = 1000;
         }
     }
 }
