@@ -73,6 +73,8 @@ namespace Tic_Tac_Toe_Game
             tmr1.Interval = 1000;
             Global.tmrCounter = (byte)(1 + Global.tmrCounter);
             txtBox1.Text = "X Turn";
+            prgrssBar1.Visible = btnReset.Visible = btn1_1.Visible = btn1_2.Visible = btn1_3.Visible = btn2_1.Visible = btn2_2.Visible = btn2_3.Visible = btn3_1.Visible = btn3_2.Visible = btn3_3.Visible = true;
+            btnStart.Visible = false;
         }
 
         private void btn1_1_Click(object sender, EventArgs e)
@@ -109,6 +111,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if(result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn2_1.Text == "X") && (btn2_2.Text == "X") && (btn2_3.Text == "X"))
             {
@@ -126,6 +133,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn3_1.Text == "X") && (btn3_2.Text == "X") && (btn3_3.Text == "X"))
@@ -145,23 +157,10 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
-            }
-            else if ((btn1_1.Text == "X") && (btn2_1.Text == "X") && (btn3_1.Text == "X"))
-            {
-
-                txtBox1.Text = "X Won!";
-                prgrssBar1.Value = 100;
-                Global.tmrCounter = 0;
-                tmr1.Stop();
-                DialogResult result = MessageBox.Show("X Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
+                else if (result == DialogResult.No)
                 {
 
-                    txtBox1.Text = "";
-                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
-                    tmr1.Start();
-                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
-                    txtBox1.Text = "X Turn";
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "X") && (btn2_1.Text == "X") && (btn3_1.Text == "X"))
@@ -180,6 +179,34 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
+            }
+            else if ((btn1_1.Text == "X") && (btn2_1.Text == "X") && (btn3_1.Text == "X"))
+            {
+
+                txtBox1.Text = "X Won!";
+                prgrssBar1.Value = 100;
+                Global.tmrCounter = 0;
+                tmr1.Stop();
+                DialogResult result = MessageBox.Show("X Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+
+                    txtBox1.Text = "";
+                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
+                    tmr1.Start();
+                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
+                    txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_2.Text == "X") && (btn2_2.Text == "X") && (btn3_2.Text == "X"))
@@ -199,6 +226,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "X") && (btn2_3.Text == "X") && (btn3_3.Text == "X"))
             {
@@ -216,6 +248,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "X") && (btn2_2.Text == "X") && (btn3_3.Text == "X"))
@@ -235,6 +272,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "X") && (btn2_2.Text == "X") && (btn3_1.Text == "X"))
             {
@@ -252,6 +294,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "O") && (btn1_2.Text == "O") && (btn1_3.Text == "O"))
@@ -271,6 +318,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn2_1.Text == "O") && (btn2_2.Text == "O") && (btn2_3.Text == "O"))
             {
@@ -288,6 +340,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn3_1.Text == "O") && (btn3_2.Text == "O") && (btn3_3.Text == "O"))
@@ -307,23 +364,10 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
-            }
-            else if ((btn1_1.Text == "O") && (btn2_1.Text == "O") && (btn3_1.Text == "O"))
-            {
-
-                txtBox1.Text = "O Won!";
-                prgrssBar1.Value = 100;
-                Global.tmrCounter = 0;
-                tmr1.Stop();
-                DialogResult result = MessageBox.Show("O Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
+                else if (result == DialogResult.No)
                 {
 
-                    txtBox1.Text = "";
-                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
-                    tmr1.Start();
-                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
-                    txtBox1.Text = "X Turn";
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "O") && (btn2_1.Text == "O") && (btn3_1.Text == "O"))
@@ -342,6 +386,34 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
+            }
+            else if ((btn1_1.Text == "O") && (btn2_1.Text == "O") && (btn3_1.Text == "O"))
+            {
+
+                txtBox1.Text = "O Won!";
+                prgrssBar1.Value = 100;
+                Global.tmrCounter = 0;
+                tmr1.Stop();
+                DialogResult result = MessageBox.Show("O Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+
+                    txtBox1.Text = "";
+                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
+                    tmr1.Start();
+                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
+                    txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_2.Text == "O") && (btn2_2.Text == "O") && (btn3_2.Text == "O"))
@@ -361,6 +433,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "O") && (btn2_3.Text == "O") && (btn3_3.Text == "O"))
             {
@@ -378,6 +455,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "O") && (btn2_2.Text == "O") && (btn3_3.Text == "O"))
@@ -397,6 +479,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "O") && (btn2_2.Text == "O") && (btn3_1.Text == "O")){
 
@@ -413,6 +500,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "") || (btn1_2.Text == "") || (btn1_3.Text == "")
@@ -437,6 +529,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
         }
@@ -477,6 +574,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn2_1.Text == "X") && (btn2_2.Text == "X") && (btn2_3.Text == "X"))
             {
@@ -494,6 +596,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn3_1.Text == "X") && (btn3_2.Text == "X") && (btn3_3.Text == "X"))
@@ -513,23 +620,10 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
-            }
-            else if ((btn1_1.Text == "X") && (btn2_1.Text == "X") && (btn3_1.Text == "X"))
-            {
-
-                txtBox1.Text = "X Won!";
-                prgrssBar1.Value = 100;
-                Global.tmrCounter = 0;
-                tmr1.Stop();
-                DialogResult result = MessageBox.Show("X Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
+                else if (result == DialogResult.No)
                 {
 
-                    txtBox1.Text = "";
-                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
-                    tmr1.Start();
-                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
-                    txtBox1.Text = "X Turn";
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "X") && (btn2_1.Text == "X") && (btn3_1.Text == "X"))
@@ -548,6 +642,34 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
+            }
+            else if ((btn1_1.Text == "X") && (btn2_1.Text == "X") && (btn3_1.Text == "X"))
+            {
+
+                txtBox1.Text = "X Won!";
+                prgrssBar1.Value = 100;
+                Global.tmrCounter = 0;
+                tmr1.Stop();
+                DialogResult result = MessageBox.Show("X Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+
+                    txtBox1.Text = "";
+                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
+                    tmr1.Start();
+                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
+                    txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_2.Text == "X") && (btn2_2.Text == "X") && (btn3_2.Text == "X"))
@@ -567,6 +689,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "X") && (btn2_2.Text == "X") && (btn3_3.Text == "X"))
             {
@@ -584,6 +711,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "X") && (btn2_2.Text == "X") && (btn3_3.Text == "X"))
@@ -603,6 +735,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "X") && (btn2_2.Text == "X") && (btn3_1.Text == "X"))
             {
@@ -620,6 +757,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "O") && (btn1_2.Text == "O") && (btn1_3.Text == "O"))
@@ -639,6 +781,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn2_1.Text == "O") && (btn2_2.Text == "O") && (btn2_3.Text == "O"))
             {
@@ -656,6 +803,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn3_1.Text == "O") && (btn3_2.Text == "O") && (btn3_3.Text == "O"))
@@ -675,23 +827,10 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
-            }
-            else if ((btn1_1.Text == "O") && (btn2_1.Text == "O") && (btn3_1.Text == "O"))
-            {
-
-                txtBox1.Text = "O Won!";
-                prgrssBar1.Value = 100;
-                Global.tmrCounter = 0;
-                tmr1.Stop();
-                DialogResult result = MessageBox.Show("O Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
+                else if (result == DialogResult.No)
                 {
 
-                    txtBox1.Text = "";
-                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
-                    tmr1.Start();
-                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
-                    txtBox1.Text = "X Turn";
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "O") && (btn2_1.Text == "O") && (btn3_1.Text == "O"))
@@ -710,6 +849,34 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
+            }
+            else if ((btn1_1.Text == "O") && (btn2_1.Text == "O") && (btn3_1.Text == "O"))
+            {
+
+                txtBox1.Text = "O Won!";
+                prgrssBar1.Value = 100;
+                Global.tmrCounter = 0;
+                tmr1.Stop();
+                DialogResult result = MessageBox.Show("O Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+
+                    txtBox1.Text = "";
+                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
+                    tmr1.Start();
+                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
+                    txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_2.Text == "O") && (btn2_2.Text == "O") && (btn3_2.Text == "O"))
@@ -729,6 +896,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "O") && (btn2_3.Text == "O") && (btn3_3.Text == "O"))
             {
@@ -746,6 +918,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "O") && (btn2_2.Text == "O") && (btn3_3.Text == "O"))
@@ -765,6 +942,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "O") && (btn2_2.Text == "O") && (btn3_1.Text == "O"))
             {
@@ -782,6 +964,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "") || (btn1_2.Text == "") || (btn1_3.Text == "")
@@ -806,6 +993,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
         }
@@ -846,6 +1038,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn2_1.Text == "X") && (btn2_2.Text == "X") && (btn2_3.Text == "X"))
             {
@@ -863,6 +1060,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn3_1.Text == "X") && (btn3_2.Text == "X") && (btn3_3.Text == "X"))
@@ -882,23 +1084,10 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
-            }
-            else if ((btn1_1.Text == "X") && (btn2_1.Text == "X") && (btn3_1.Text == "X"))
-            {
-
-                txtBox1.Text = "X Won!";
-                prgrssBar1.Value = 100;
-                Global.tmrCounter = 0;
-                tmr1.Stop();
-                DialogResult result = MessageBox.Show("X Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
+                else if (result == DialogResult.No)
                 {
 
-                    txtBox1.Text = "";
-                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
-                    tmr1.Start();
-                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
-                    txtBox1.Text = "X Turn";
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "X") && (btn2_1.Text == "X") && (btn3_1.Text == "X"))
@@ -917,6 +1106,34 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
+            }
+            else if ((btn1_1.Text == "X") && (btn2_1.Text == "X") && (btn3_1.Text == "X"))
+            {
+
+                txtBox1.Text = "X Won!";
+                prgrssBar1.Value = 100;
+                Global.tmrCounter = 0;
+                tmr1.Stop();
+                DialogResult result = MessageBox.Show("X Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+
+                    txtBox1.Text = "";
+                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
+                    tmr1.Start();
+                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
+                    txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_2.Text == "X") && (btn2_2.Text == "X") && (btn3_2.Text == "X"))
@@ -936,6 +1153,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "X") && (btn2_3.Text == "X") && (btn3_3.Text == "X"))
             {
@@ -953,6 +1175,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "X") && (btn2_2.Text == "X") && (btn3_3.Text == "X"))
@@ -972,6 +1199,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "X") && (btn2_2.Text == "X") && (btn3_1.Text == "X"))
             {
@@ -989,6 +1221,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "O") && (btn1_2.Text == "O") && (btn1_3.Text == "O"))
@@ -1008,6 +1245,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn2_1.Text == "O") && (btn2_2.Text == "O") && (btn2_3.Text == "O"))
             {
@@ -1025,6 +1267,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn3_1.Text == "O") && (btn3_2.Text == "O") && (btn3_3.Text == "O"))
@@ -1044,23 +1291,10 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
-            }
-            else if ((btn1_1.Text == "O") && (btn2_1.Text == "O") && (btn3_1.Text == "O"))
-            {
-
-                txtBox1.Text = "O Won!";
-                prgrssBar1.Value = 100;
-                Global.tmrCounter = 0;
-                tmr1.Stop();
-                DialogResult result = MessageBox.Show("O Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
+                else if (result == DialogResult.No)
                 {
 
-                    txtBox1.Text = "";
-                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
-                    tmr1.Start();
-                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
-                    txtBox1.Text = "X Turn";
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "O") && (btn2_1.Text == "O") && (btn3_1.Text == "O"))
@@ -1079,6 +1313,34 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
+            }
+            else if ((btn1_1.Text == "O") && (btn2_1.Text == "O") && (btn3_1.Text == "O"))
+            {
+
+                txtBox1.Text = "O Won!";
+                prgrssBar1.Value = 100;
+                Global.tmrCounter = 0;
+                tmr1.Stop();
+                DialogResult result = MessageBox.Show("O Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+
+                    txtBox1.Text = "";
+                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
+                    tmr1.Start();
+                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
+                    txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_2.Text == "O") && (btn2_2.Text == "O") && (btn3_2.Text == "O"))
@@ -1098,6 +1360,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "O") && (btn2_3.Text == "O") && (btn3_3.Text == "O"))
             {
@@ -1115,6 +1382,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "O") && (btn2_2.Text == "O") && (btn3_3.Text == "O"))
@@ -1134,6 +1406,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "O") && (btn2_2.Text == "O") && (btn3_1.Text == "O"))
             {
@@ -1151,6 +1428,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "") || (btn1_2.Text == "") || (btn1_3.Text == "")
@@ -1175,6 +1457,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
         }
@@ -1215,6 +1502,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn2_1.Text == "X") && (btn2_2.Text == "X") && (btn2_3.Text == "X"))
             {
@@ -1232,6 +1524,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn3_1.Text == "X") && (btn3_2.Text == "X") && (btn3_3.Text == "X"))
@@ -1251,23 +1548,10 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
-            }
-            else if ((btn1_1.Text == "X") && (btn2_1.Text == "X") && (btn3_1.Text == "X"))
-            {
-
-                txtBox1.Text = "X Won!";
-                prgrssBar1.Value = 100;
-                Global.tmrCounter = 0;
-                tmr1.Stop();
-                DialogResult result = MessageBox.Show("X Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
+                else if (result == DialogResult.No)
                 {
 
-                    txtBox1.Text = "";
-                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
-                    tmr1.Start();
-                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
-                    txtBox1.Text = "X Turn";
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "X") && (btn2_1.Text == "X") && (btn3_1.Text == "X"))
@@ -1286,6 +1570,34 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
+            }
+            else if ((btn1_1.Text == "X") && (btn2_1.Text == "X") && (btn3_1.Text == "X"))
+            {
+
+                txtBox1.Text = "X Won!";
+                prgrssBar1.Value = 100;
+                Global.tmrCounter = 0;
+                tmr1.Stop();
+                DialogResult result = MessageBox.Show("X Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+
+                    txtBox1.Text = "";
+                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
+                    tmr1.Start();
+                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
+                    txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_2.Text == "X") && (btn2_2.Text == "X") && (btn3_2.Text == "X"))
@@ -1305,6 +1617,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "X") && (btn2_3.Text == "X") && (btn3_3.Text == "X"))
             {
@@ -1322,6 +1639,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "X") && (btn2_2.Text == "X") && (btn3_3.Text == "X"))
@@ -1341,6 +1663,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "X") && (btn2_2.Text == "X") && (btn3_1.Text == "X"))
             {
@@ -1358,6 +1685,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "O") && (btn1_2.Text == "O") && (btn1_3.Text == "O"))
@@ -1377,6 +1709,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn2_1.Text == "O") && (btn2_2.Text == "O") && (btn2_3.Text == "O"))
             {
@@ -1394,6 +1731,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn3_1.Text == "O") && (btn3_2.Text == "O") && (btn3_3.Text == "O"))
@@ -1413,23 +1755,10 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
-            }
-            else if ((btn1_1.Text == "O") && (btn2_1.Text == "O") && (btn3_1.Text == "O"))
-            {
-
-                txtBox1.Text = "O Won!";
-                prgrssBar1.Value = 100;
-                Global.tmrCounter = 0;
-                tmr1.Stop();
-                DialogResult result = MessageBox.Show("O Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
+                else if (result == DialogResult.No)
                 {
 
-                    txtBox1.Text = "";
-                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
-                    tmr1.Start();
-                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
-                    txtBox1.Text = "X Turn";
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "O") && (btn2_1.Text == "O") && (btn3_1.Text == "O"))
@@ -1448,6 +1777,34 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
+            }
+            else if ((btn1_1.Text == "O") && (btn2_1.Text == "O") && (btn3_1.Text == "O"))
+            {
+
+                txtBox1.Text = "O Won!";
+                prgrssBar1.Value = 100;
+                Global.tmrCounter = 0;
+                tmr1.Stop();
+                DialogResult result = MessageBox.Show("O Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+
+                    txtBox1.Text = "";
+                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
+                    tmr1.Start();
+                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
+                    txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_2.Text == "O") && (btn2_2.Text == "O") && (btn3_2.Text == "O"))
@@ -1467,6 +1824,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "O") && (btn2_3.Text == "O") && (btn3_3.Text == "O"))
             {
@@ -1484,6 +1846,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "O") && (btn2_2.Text == "O") && (btn3_3.Text == "O"))
@@ -1503,6 +1870,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "O") && (btn2_2.Text == "O") && (btn3_1.Text == "O"))
             {
@@ -1520,6 +1892,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "") || (btn1_2.Text == "") || (btn1_3.Text == "")
@@ -1544,6 +1921,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
         }
@@ -1584,6 +1966,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn2_1.Text == "X") && (btn2_2.Text == "X") && (btn2_3.Text == "X"))
             {
@@ -1601,6 +1988,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn3_1.Text == "X") && (btn3_2.Text == "X") && (btn3_3.Text == "X"))
@@ -1620,23 +2012,10 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
-            }
-            else if ((btn1_1.Text == "X") && (btn2_1.Text == "X") && (btn3_1.Text == "X"))
-            {
-
-                txtBox1.Text = "X Won!";
-                prgrssBar1.Value = 100;
-                Global.tmrCounter = 0;
-                tmr1.Stop();
-                DialogResult result = MessageBox.Show("X Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
+                else if (result == DialogResult.No)
                 {
 
-                    txtBox1.Text = "";
-                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
-                    tmr1.Start();
-                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
-                    txtBox1.Text = "X Turn";
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "X") && (btn2_1.Text == "X") && (btn3_1.Text == "X"))
@@ -1655,6 +2034,34 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
+            }
+            else if ((btn1_1.Text == "X") && (btn2_1.Text == "X") && (btn3_1.Text == "X"))
+            {
+
+                txtBox1.Text = "X Won!";
+                prgrssBar1.Value = 100;
+                Global.tmrCounter = 0;
+                tmr1.Stop();
+                DialogResult result = MessageBox.Show("X Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+
+                    txtBox1.Text = "";
+                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
+                    tmr1.Start();
+                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
+                    txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_2.Text == "X") && (btn2_2.Text == "X") && (btn3_2.Text == "X"))
@@ -1674,6 +2081,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "X") && (btn2_3.Text == "X") && (btn3_3.Text == "X"))
             {
@@ -1691,6 +2103,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "X") && (btn2_2.Text == "X") && (btn3_3.Text == "X"))
@@ -1710,6 +2127,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "X") && (btn2_2.Text == "X") && (btn3_1.Text == "X"))
             {
@@ -1727,6 +2149,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "O") && (btn1_2.Text == "O") && (btn1_3.Text == "O"))
@@ -1746,6 +2173,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn2_1.Text == "O") && (btn2_2.Text == "O") && (btn2_3.Text == "O"))
             {
@@ -1763,6 +2195,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn3_1.Text == "O") && (btn3_2.Text == "O") && (btn3_3.Text == "O"))
@@ -1782,23 +2219,10 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
-            }
-            else if ((btn1_1.Text == "O") && (btn2_1.Text == "O") && (btn3_1.Text == "O"))
-            {
-
-                txtBox1.Text = "O Won!";
-                prgrssBar1.Value = 100;
-                Global.tmrCounter = 0;
-                tmr1.Stop();
-                DialogResult result = MessageBox.Show("O Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
+                else if (result == DialogResult.No)
                 {
 
-                    txtBox1.Text = "";
-                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
-                    tmr1.Start();
-                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
-                    txtBox1.Text = "X Turn";
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "O") && (btn2_1.Text == "O") && (btn3_1.Text == "O"))
@@ -1817,6 +2241,34 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
+            }
+            else if ((btn1_1.Text == "O") && (btn2_1.Text == "O") && (btn3_1.Text == "O"))
+            {
+
+                txtBox1.Text = "O Won!";
+                prgrssBar1.Value = 100;
+                Global.tmrCounter = 0;
+                tmr1.Stop();
+                DialogResult result = MessageBox.Show("O Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+
+                    txtBox1.Text = "";
+                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
+                    tmr1.Start();
+                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
+                    txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_2.Text == "O") && (btn2_2.Text == "O") && (btn3_2.Text == "O"))
@@ -1836,6 +2288,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "O") && (btn2_3.Text == "O") && (btn3_3.Text == "O"))
             {
@@ -1853,6 +2310,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "O") && (btn2_2.Text == "O") && (btn3_3.Text == "O"))
@@ -1872,6 +2334,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "O") && (btn2_2.Text == "O") && (btn3_1.Text == "O"))
             {
@@ -1889,6 +2356,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "") || (btn1_2.Text == "") || (btn1_3.Text == "")
@@ -1913,6 +2385,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
         }
@@ -1953,6 +2430,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn2_1.Text == "X") && (btn2_2.Text == "X") && (btn2_3.Text == "X"))
             {
@@ -1970,6 +2452,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn3_1.Text == "X") && (btn3_2.Text == "X") && (btn3_3.Text == "X"))
@@ -1989,23 +2476,10 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
-            }
-            else if ((btn1_1.Text == "X") && (btn2_1.Text == "X") && (btn3_1.Text == "X"))
-            {
-
-                txtBox1.Text = "X Won!";
-                prgrssBar1.Value = 100;
-                Global.tmrCounter = 0;
-                tmr1.Stop();
-                DialogResult result = MessageBox.Show("X Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
+                else if (result == DialogResult.No)
                 {
 
-                    txtBox1.Text = "";
-                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
-                    tmr1.Start();
-                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
-                    txtBox1.Text = "X Turn";
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "X") && (btn2_1.Text == "X") && (btn3_1.Text == "X"))
@@ -2024,6 +2498,34 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
+            }
+            else if ((btn1_1.Text == "X") && (btn2_1.Text == "X") && (btn3_1.Text == "X"))
+            {
+
+                txtBox1.Text = "X Won!";
+                prgrssBar1.Value = 100;
+                Global.tmrCounter = 0;
+                tmr1.Stop();
+                DialogResult result = MessageBox.Show("X Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+
+                    txtBox1.Text = "";
+                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
+                    tmr1.Start();
+                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
+                    txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_2.Text == "X") && (btn2_2.Text == "X") && (btn3_2.Text == "X"))
@@ -2043,6 +2545,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "X") && (btn2_3.Text == "X") && (btn3_3.Text == "X"))
             {
@@ -2060,6 +2567,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "X") && (btn2_2.Text == "X") && (btn3_3.Text == "X"))
@@ -2079,6 +2591,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "X") && (btn2_2.Text == "X") && (btn3_1.Text == "X"))
             {
@@ -2096,6 +2613,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "O") && (btn1_2.Text == "O") && (btn1_3.Text == "O"))
@@ -2115,6 +2637,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn2_1.Text == "O") && (btn2_2.Text == "O") && (btn2_3.Text == "O"))
             {
@@ -2132,6 +2659,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn3_1.Text == "O") && (btn3_2.Text == "O") && (btn3_3.Text == "O"))
@@ -2151,23 +2683,10 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
-            }
-            else if ((btn1_1.Text == "O") && (btn2_1.Text == "O") && (btn3_1.Text == "O"))
-            {
-
-                txtBox1.Text = "O Won!";
-                prgrssBar1.Value = 100;
-                Global.tmrCounter = 0;
-                tmr1.Stop();
-                DialogResult result = MessageBox.Show("O Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
+                else if (result == DialogResult.No)
                 {
 
-                    txtBox1.Text = "";
-                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
-                    tmr1.Start();
-                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
-                    txtBox1.Text = "X Turn";
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "O") && (btn2_1.Text == "O") && (btn3_1.Text == "O"))
@@ -2186,6 +2705,34 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
+            }
+            else if ((btn1_1.Text == "O") && (btn2_1.Text == "O") && (btn3_1.Text == "O"))
+            {
+
+                txtBox1.Text = "O Won!";
+                prgrssBar1.Value = 100;
+                Global.tmrCounter = 0;
+                tmr1.Stop();
+                DialogResult result = MessageBox.Show("O Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+
+                    txtBox1.Text = "";
+                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
+                    tmr1.Start();
+                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
+                    txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_2.Text == "O") && (btn2_2.Text == "O") && (btn3_2.Text == "O"))
@@ -2205,6 +2752,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "O") && (btn2_3.Text == "O") && (btn3_3.Text == "O"))
             {
@@ -2223,6 +2775,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_1.Text == "O") && (btn2_2.Text == "O") && (btn3_3.Text == "O"))
             {
@@ -2240,6 +2797,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "") || (btn1_2.Text == "") || (btn1_3.Text == "")
@@ -2264,6 +2826,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
         }
@@ -2304,6 +2871,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn2_1.Text == "X") && (btn2_2.Text == "X") && (btn2_3.Text == "X"))
             {
@@ -2321,6 +2893,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn3_1.Text == "X") && (btn3_2.Text == "X") && (btn3_3.Text == "X"))
@@ -2340,23 +2917,10 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
-            }
-            else if ((btn1_1.Text == "X") && (btn2_1.Text == "X") && (btn3_1.Text == "X"))
-            {
-
-                txtBox1.Text = "X Won!";
-                prgrssBar1.Value = 100;
-                Global.tmrCounter = 0;
-                tmr1.Stop();
-                DialogResult result = MessageBox.Show("X Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
+                else if (result == DialogResult.No)
                 {
 
-                    txtBox1.Text = "";
-                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
-                    tmr1.Start();
-                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
-                    txtBox1.Text = "X Turn";
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "X") && (btn2_1.Text == "X") && (btn3_1.Text == "X"))
@@ -2375,6 +2939,34 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
+            }
+            else if ((btn1_1.Text == "X") && (btn2_1.Text == "X") && (btn3_1.Text == "X"))
+            {
+
+                txtBox1.Text = "X Won!";
+                prgrssBar1.Value = 100;
+                Global.tmrCounter = 0;
+                tmr1.Stop();
+                DialogResult result = MessageBox.Show("X Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+
+                    txtBox1.Text = "";
+                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
+                    tmr1.Start();
+                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
+                    txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_2.Text == "X") && (btn2_2.Text == "X") && (btn3_2.Text == "X"))
@@ -2394,6 +2986,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "X") && (btn2_3.Text == "X") && (btn3_3.Text == "X"))
             {
@@ -2411,6 +3008,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "X") && (btn2_2.Text == "X") && (btn3_3.Text == "X"))
@@ -2430,6 +3032,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "X") && (btn2_2.Text == "X") && (btn3_1.Text == "X"))
             {
@@ -2447,6 +3054,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "O") && (btn1_2.Text == "O") && (btn1_3.Text == "O"))
@@ -2466,6 +3078,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn2_1.Text == "O") && (btn2_2.Text == "O") && (btn2_3.Text == "O"))
             {
@@ -2483,6 +3100,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn3_1.Text == "O") && (btn3_2.Text == "O") && (btn3_3.Text == "O"))
@@ -2502,23 +3124,10 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
-            }
-            else if ((btn1_1.Text == "O") && (btn2_1.Text == "O") && (btn3_1.Text == "O"))
-            {
-
-                txtBox1.Text = "O Won!";
-                prgrssBar1.Value = 100;
-                Global.tmrCounter = 0;
-                tmr1.Stop();
-                DialogResult result = MessageBox.Show("O Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
+                else if (result == DialogResult.No)
                 {
 
-                    txtBox1.Text = "";
-                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
-                    tmr1.Start();
-                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
-                    txtBox1.Text = "X Turn";
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "O") && (btn2_1.Text == "O") && (btn3_1.Text == "O"))
@@ -2537,6 +3146,34 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
+            }
+            else if ((btn1_1.Text == "O") && (btn2_1.Text == "O") && (btn3_1.Text == "O"))
+            {
+
+                txtBox1.Text = "O Won!";
+                prgrssBar1.Value = 100;
+                Global.tmrCounter = 0;
+                tmr1.Stop();
+                DialogResult result = MessageBox.Show("O Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+
+                    txtBox1.Text = "";
+                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
+                    tmr1.Start();
+                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
+                    txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_2.Text == "O") && (btn2_2.Text == "O") && (btn3_2.Text == "O"))
@@ -2556,6 +3193,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "O") && (btn2_3.Text == "O") && (btn3_3.Text == "O"))
             {
@@ -2573,6 +3215,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "O") && (btn2_2.Text == "O") && (btn3_3.Text == "O"))
@@ -2592,23 +3239,10 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
-            }
-            else if ((btn1_3.Text == "O") && (btn2_2.Text == "O") && (btn3_1.Text == "O"))
-            {
-
-                txtBox1.Text = "O Won!";
-                prgrssBar1.Value = 100;
-                Global.tmrCounter = 0;
-                tmr1.Stop();
-                DialogResult result = MessageBox.Show("O Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
+                else if (result == DialogResult.No)
                 {
 
-                    txtBox1.Text = "";
-                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
-                    tmr1.Start();
-                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
-                    txtBox1.Text = "X Turn";
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_3.Text == "O") && (btn2_2.Text == "O") && (btn3_1.Text == "O"))
@@ -2627,6 +3261,34 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
+            }
+            else if ((btn1_3.Text == "O") && (btn2_2.Text == "O") && (btn3_1.Text == "O"))
+            {
+
+                txtBox1.Text = "O Won!";
+                prgrssBar1.Value = 100;
+                Global.tmrCounter = 0;
+                tmr1.Stop();
+                DialogResult result = MessageBox.Show("O Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+
+                    txtBox1.Text = "";
+                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
+                    tmr1.Start();
+                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
+                    txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "") || (btn1_2.Text == "") || (btn1_3.Text == "")
@@ -2651,6 +3313,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
         }
@@ -2691,6 +3358,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn2_1.Text == "X") && (btn2_2.Text == "X") && (btn2_3.Text == "X"))
             {
@@ -2708,6 +3380,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn3_1.Text == "X") && (btn3_2.Text == "X") && (btn3_3.Text == "X"))
@@ -2727,23 +3404,10 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
-            }
-            else if ((btn1_1.Text == "X") && (btn2_1.Text == "X") && (btn3_1.Text == "X"))
-            {
-
-                txtBox1.Text = "X Won!";
-                prgrssBar1.Value = 100;
-                Global.tmrCounter = 0;
-                tmr1.Stop();
-                DialogResult result = MessageBox.Show("X Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
+                else if (result == DialogResult.No)
                 {
 
-                    txtBox1.Text = "";
-                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
-                    tmr1.Start();
-                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
-                    txtBox1.Text = "X Turn";
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "X") && (btn2_1.Text == "X") && (btn3_1.Text == "X"))
@@ -2762,6 +3426,34 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
+            }
+            else if ((btn1_1.Text == "X") && (btn2_1.Text == "X") && (btn3_1.Text == "X"))
+            {
+
+                txtBox1.Text = "X Won!";
+                prgrssBar1.Value = 100;
+                Global.tmrCounter = 0;
+                tmr1.Stop();
+                DialogResult result = MessageBox.Show("X Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+
+                    txtBox1.Text = "";
+                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
+                    tmr1.Start();
+                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
+                    txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_2.Text == "X") && (btn2_2.Text == "X") && (btn3_2.Text == "X"))
@@ -2781,6 +3473,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "X") && (btn2_3.Text == "X") && (btn3_3.Text == "X"))
             {
@@ -2798,6 +3495,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "X") && (btn2_2.Text == "X") && (btn3_3.Text == "X"))
@@ -2817,6 +3519,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "X") && (btn2_2.Text == "X") && (btn3_1.Text == "X"))
             {
@@ -2834,6 +3541,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "O") && (btn1_2.Text == "O") && (btn1_3.Text == "O"))
@@ -2853,6 +3565,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn2_1.Text == "O") && (btn2_2.Text == "O") && (btn2_3.Text == "O"))
             {
@@ -2870,6 +3587,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn3_1.Text == "O") && (btn3_2.Text == "O") && (btn3_3.Text == "O"))
@@ -2889,23 +3611,10 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
-            }
-            else if ((btn1_1.Text == "O") && (btn2_1.Text == "O") && (btn3_1.Text == "O"))
-            {
-
-                txtBox1.Text = "O Won!";
-                prgrssBar1.Value = 100;
-                Global.tmrCounter = 0;
-                tmr1.Stop();
-                DialogResult result = MessageBox.Show("O Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
+                else if (result == DialogResult.No)
                 {
 
-                    txtBox1.Text = "";
-                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
-                    tmr1.Start();
-                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
-                    txtBox1.Text = "X Turn";
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "O") && (btn2_1.Text == "O") && (btn3_1.Text == "O"))
@@ -2924,6 +3633,34 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
+            }
+            else if ((btn1_1.Text == "O") && (btn2_1.Text == "O") && (btn3_1.Text == "O"))
+            {
+
+                txtBox1.Text = "O Won!";
+                prgrssBar1.Value = 100;
+                Global.tmrCounter = 0;
+                tmr1.Stop();
+                DialogResult result = MessageBox.Show("O Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+
+                    txtBox1.Text = "";
+                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
+                    tmr1.Start();
+                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
+                    txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_2.Text == "O") && (btn2_2.Text == "O") && (btn3_2.Text == "O"))
@@ -2943,6 +3680,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "O") && (btn2_3.Text == "O") && (btn3_3.Text == "O"))
             {
@@ -2960,6 +3702,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "O") && (btn2_2.Text == "O") && (btn3_3.Text == "O"))
@@ -2979,6 +3726,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "O") && (btn2_2.Text == "O") && (btn3_1.Text == "O"))
             {
@@ -2996,6 +3748,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "") || (btn1_2.Text == "") || (btn1_3.Text == "")
@@ -3020,6 +3777,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
         }
@@ -3060,6 +3822,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn2_1.Text == "X") && (btn2_2.Text == "X") && (btn2_3.Text == "X"))
             {
@@ -3077,6 +3844,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn3_1.Text == "X") && (btn3_2.Text == "X") && (btn3_3.Text == "X"))
@@ -3096,23 +3868,10 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
-            }
-            else if ((btn1_1.Text == "X") && (btn2_1.Text == "X") && (btn3_1.Text == "X"))
-            {
-
-                txtBox1.Text = "X Won!";
-                prgrssBar1.Value = 100;
-                Global.tmrCounter = 0;
-                tmr1.Stop();
-                DialogResult result = MessageBox.Show("X Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
+                else if (result == DialogResult.No)
                 {
 
-                    txtBox1.Text = "";
-                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
-                    tmr1.Start();
-                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
-                    txtBox1.Text = "X Turn";
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "X") && (btn2_1.Text == "X") && (btn3_1.Text == "X"))
@@ -3131,6 +3890,34 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
+            }
+            else if ((btn1_1.Text == "X") && (btn2_1.Text == "X") && (btn3_1.Text == "X"))
+            {
+
+                txtBox1.Text = "X Won!";
+                prgrssBar1.Value = 100;
+                Global.tmrCounter = 0;
+                tmr1.Stop();
+                DialogResult result = MessageBox.Show("X Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+
+                    txtBox1.Text = "";
+                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
+                    tmr1.Start();
+                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
+                    txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_2.Text == "X") && (btn2_2.Text == "X") && (btn3_2.Text == "X"))
@@ -3150,6 +3937,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "X") && (btn2_3.Text == "X") && (btn3_3.Text == "X"))
             {
@@ -3167,6 +3959,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "X") && (btn2_2.Text == "X") && (btn3_3.Text == "X"))
@@ -3186,6 +3983,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "X") && (btn2_2.Text == "X") && (btn3_1.Text == "X"))
             {
@@ -3203,6 +4005,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "O") && (btn1_2.Text == "O") && (btn1_3.Text == "O"))
@@ -3222,6 +4029,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn2_1.Text == "O") && (btn2_2.Text == "O") && (btn2_3.Text == "O"))
             {
@@ -3239,6 +4051,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn3_1.Text == "O") && (btn3_2.Text == "O") && (btn3_3.Text == "O"))
@@ -3258,23 +4075,10 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
-            }
-            else if ((btn1_1.Text == "O") && (btn2_1.Text == "O") && (btn3_1.Text == "O"))
-            {
-
-                txtBox1.Text = "O Won!";
-                prgrssBar1.Value = 100;
-                Global.tmrCounter = 0;
-                tmr1.Stop();
-                DialogResult result = MessageBox.Show("O Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
+                else if (result == DialogResult.No)
                 {
 
-                    txtBox1.Text = "";
-                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
-                    tmr1.Start();
-                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
-                    txtBox1.Text = "X Turn";
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "O") && (btn2_1.Text == "O") && (btn3_1.Text == "O"))
@@ -3293,6 +4097,34 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
+            }
+            else if ((btn1_1.Text == "O") && (btn2_1.Text == "O") && (btn3_1.Text == "O"))
+            {
+
+                txtBox1.Text = "O Won!";
+                prgrssBar1.Value = 100;
+                Global.tmrCounter = 0;
+                tmr1.Stop();
+                DialogResult result = MessageBox.Show("O Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+
+                    txtBox1.Text = "";
+                    btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
+                    tmr1.Start();
+                    Global.tmrCounter = (byte)(1 + Global.tmrCounter);
+                    txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_2.Text == "O") && (btn2_2.Text == "O") && (btn3_2.Text == "O"))
@@ -3312,6 +4144,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "O") && (btn2_3.Text == "O") && (btn3_3.Text == "O"))
             {
@@ -3329,6 +4166,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "O") && (btn2_2.Text == "O") && (btn3_3.Text == "O"))
@@ -3348,6 +4190,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
             else if ((btn1_3.Text == "O") && (btn2_2.Text == "O") && (btn3_1.Text == "O"))
             {
@@ -3365,6 +4212,11 @@ namespace Tic_Tac_Toe_Game
                     tmr1.Start();
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
+                }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
                 }
             }
             else if ((btn1_1.Text == "") || (btn1_2.Text == "") || (btn1_3.Text == "")
@@ -3390,6 +4242,11 @@ namespace Tic_Tac_Toe_Game
                     Global.tmrCounter = (byte)(1 + Global.tmrCounter);
                     txtBox1.Text = "X Turn";
                 }
+                else if (result == DialogResult.No)
+                {
+
+                    System.Windows.Forms.Application.Exit();
+                }
             }
         }
 
@@ -3400,6 +4257,9 @@ namespace Tic_Tac_Toe_Game
             tmr1.Stop();
             txtBox1.Text = "";
             btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
+            btnStart.Visible = true;
+            btnReset.Visible = false;
+            prgrssBar1.Visible = btnReset.Visible = btn1_1.Visible = btn1_2.Visible = btn1_3.Visible = btn2_1.Visible = btn2_2.Visible = btn2_3.Visible = btn3_1.Visible = btn3_2.Visible = btn3_3.Visible = false;
         }
     }
 }
