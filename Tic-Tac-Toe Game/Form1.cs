@@ -73,7 +73,7 @@ namespace Tic_Tac_Toe_Game
             tmr1.Interval = 1000;
             Global.tmrCounter = (byte)(1 + Global.tmrCounter);
             txtBox1.Text = "X Turn";
-            prgrssBar1.Visible = btnReset.Visible = btn1_1.Visible = btn1_2.Visible = btn1_3.Visible = btn2_1.Visible = btn2_2.Visible = btn2_3.Visible = btn3_1.Visible = btn3_2.Visible = btn3_3.Visible = true;
+            prgrssBar1.Visible = lbl1.Visible = btnReset.Visible = btn1_1.Visible = btn1_2.Visible = btn1_3.Visible = btn2_1.Visible = btn2_2.Visible = btn2_3.Visible = btn3_1.Visible = btn3_2.Visible = btn3_3.Visible = true;
             btnStart.Visible = false;
         }
 
@@ -4259,7 +4259,7 @@ namespace Tic_Tac_Toe_Game
             btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
             btnStart.Visible = true;
             btnReset.Visible = false;
-            prgrssBar1.Visible = btnReset.Visible = btn1_1.Visible = btn1_2.Visible = btn1_3.Visible = btn2_1.Visible = btn2_2.Visible = btn2_3.Visible = btn3_1.Visible = btn3_2.Visible = btn3_3.Visible = false;
+            prgrssBar1.Visible = lbl1.Visible = btnReset.Visible = btn1_1.Visible = btn1_2.Visible = btn1_3.Visible = btn2_1.Visible = btn2_2.Visible = btn2_3.Visible = btn3_1.Visible = btn3_2.Visible = btn3_3.Visible = false;
         }
     }
 }
