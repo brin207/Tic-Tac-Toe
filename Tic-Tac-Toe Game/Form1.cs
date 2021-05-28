@@ -21,6 +21,8 @@ namespace Tic_Tac_Toe_Game
         {
 
             public static byte tmrCounter = 0;
+            public static byte winXCounter = 0;
+            public static byte winOCounter = 0;
         }
 
         public void btnfxn(Button btn)
@@ -50,6 +52,8 @@ namespace Tic_Tac_Toe_Game
                 btn1_1.BackColor = btn1_2.BackColor = btn1_3.BackColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
                 Global.tmrCounter = 0;
+                Global.winXCounter++;
+                txtBoxX.Text = Global.winXCounter.ToString();
                 tmr1.Stop();
                 DialogResult result = MessageBox.Show("X Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
@@ -78,6 +82,8 @@ namespace Tic_Tac_Toe_Game
                 btn2_1.FlatAppearance.BorderColor = btn2_2.FlatAppearance.BorderColor = btn2_3.FlatAppearance.BorderColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
                 Global.tmrCounter = 0;
+                Global.winXCounter++;
+                txtBoxX.Text = Global.winXCounter.ToString();
                 tmr1.Stop();
                 DialogResult result = MessageBox.Show("X Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
@@ -105,6 +111,8 @@ namespace Tic_Tac_Toe_Game
                 btn3_1.FlatAppearance.BorderColor = btn3_2.FlatAppearance.BorderColor = btn3_3.FlatAppearance.BorderColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
                 Global.tmrCounter = 0;
+                Global.winXCounter++;
+                txtBoxX.Text = Global.winXCounter.ToString();
                 tmr1.Stop();
                 DialogResult result = MessageBox.Show("X Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
@@ -132,6 +140,8 @@ namespace Tic_Tac_Toe_Game
                 btn1_1.FlatAppearance.BorderColor = btn2_1.FlatAppearance.BorderColor = btn3_1.FlatAppearance.BorderColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
                 Global.tmrCounter = 0;
+                Global.winXCounter++;
+                txtBoxX.Text = Global.winXCounter.ToString();
                 tmr1.Stop();
                 DialogResult result = MessageBox.Show("X Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
@@ -159,6 +169,8 @@ namespace Tic_Tac_Toe_Game
                 btn1_2.FlatAppearance.BorderColor = btn2_2.FlatAppearance.BorderColor = btn3_2.FlatAppearance.BorderColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
                 Global.tmrCounter = 0;
+                Global.winXCounter++;
+                txtBoxX.Text = Global.winXCounter.ToString();
                 tmr1.Stop();
                 DialogResult result = MessageBox.Show("X Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
@@ -186,6 +198,8 @@ namespace Tic_Tac_Toe_Game
                 btn1_3.FlatAppearance.BorderColor = btn2_3.FlatAppearance.BorderColor = btn3_3.FlatAppearance.BorderColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
                 Global.tmrCounter = 0;
+                Global.winXCounter++;
+                txtBoxX.Text = Global.winXCounter.ToString();
                 tmr1.Stop();
                 DialogResult result = MessageBox.Show("X Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
@@ -213,6 +227,8 @@ namespace Tic_Tac_Toe_Game
                 btn1_1.FlatAppearance.BorderColor = btn2_2.FlatAppearance.BorderColor = btn3_3.FlatAppearance.BorderColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
                 Global.tmrCounter = 0;
+                Global.winXCounter++;
+                txtBoxX.Text = Global.winXCounter.ToString();
                 tmr1.Stop();
                 DialogResult result = MessageBox.Show("X Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
@@ -240,6 +256,8 @@ namespace Tic_Tac_Toe_Game
                 btn1_3.FlatAppearance.BorderColor = btn2_2.FlatAppearance.BorderColor = btn3_1.FlatAppearance.BorderColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
                 Global.tmrCounter = 0;
+                Global.winXCounter++;
+                txtBoxX.Text = Global.winXCounter.ToString();
                 tmr1.Stop();
                 DialogResult result = MessageBox.Show("X Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
@@ -267,6 +285,8 @@ namespace Tic_Tac_Toe_Game
                 btn1_1.BackColor = btn1_2.BackColor = btn1_3.BackColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
                 Global.tmrCounter = 0;
+                Global.winOCounter++;
+                txtBoxO.Text = Global.winOCounter.ToString();
                 tmr1.Stop();
                 DialogResult result = MessageBox.Show("O Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
@@ -294,6 +314,8 @@ namespace Tic_Tac_Toe_Game
                 btn2_1.FlatAppearance.BorderColor = btn2_2.FlatAppearance.BorderColor = btn2_3.FlatAppearance.BorderColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
                 Global.tmrCounter = 0;
+                Global.winOCounter++;
+                txtBoxO.Text = Global.winOCounter.ToString();
                 tmr1.Stop();
                 DialogResult result = MessageBox.Show("O Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
@@ -321,6 +343,8 @@ namespace Tic_Tac_Toe_Game
                 btn3_1.FlatAppearance.BorderColor = btn3_2.FlatAppearance.BorderColor = btn3_3.FlatAppearance.BorderColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
                 Global.tmrCounter = 0;
+                Global.winOCounter++;
+                txtBoxO.Text = Global.winOCounter.ToString();
                 tmr1.Stop();
                 DialogResult result = MessageBox.Show("O Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
@@ -348,6 +372,8 @@ namespace Tic_Tac_Toe_Game
                 btn1_1.FlatAppearance.BorderColor = btn2_1.FlatAppearance.BorderColor = btn3_1.FlatAppearance.BorderColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
                 Global.tmrCounter = 0;
+                Global.winOCounter++;
+                txtBoxO.Text = Global.winOCounter.ToString();
                 tmr1.Stop();
                 DialogResult result = MessageBox.Show("O Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
@@ -375,6 +401,8 @@ namespace Tic_Tac_Toe_Game
                 btn1_2.FlatAppearance.BorderColor = btn2_2.FlatAppearance.BorderColor = btn3_2.FlatAppearance.BorderColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
                 Global.tmrCounter = 0;
+                Global.winOCounter++;
+                txtBoxO.Text = Global.winOCounter.ToString();
                 tmr1.Stop();
                 DialogResult result = MessageBox.Show("O Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
@@ -402,6 +430,8 @@ namespace Tic_Tac_Toe_Game
                 btn1_3.FlatAppearance.BorderColor = btn2_3.FlatAppearance.BorderColor = btn3_3.FlatAppearance.BorderColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
                 Global.tmrCounter = 0;
+                Global.winOCounter++;
+                txtBoxO.Text = Global.winOCounter.ToString();
                 tmr1.Stop();
                 DialogResult result = MessageBox.Show("O Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
@@ -429,6 +459,8 @@ namespace Tic_Tac_Toe_Game
                 btn1_1.FlatAppearance.BorderColor = btn2_2.FlatAppearance.BorderColor = btn3_3.FlatAppearance.BorderColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
                 Global.tmrCounter = 0;
+                Global.winOCounter++;
+                txtBoxO.Text = Global.winOCounter.ToString();
                 tmr1.Stop();
                 DialogResult result = MessageBox.Show("O Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
@@ -456,6 +488,8 @@ namespace Tic_Tac_Toe_Game
                 btn1_3.FlatAppearance.BorderColor = btn2_2.FlatAppearance.BorderColor = btn3_1.FlatAppearance.BorderColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
                 Global.tmrCounter = 0;
+                Global.winOCounter++;
+                txtBoxO.Text = Global.winOCounter.ToString();
                 tmr1.Stop();
                 DialogResult result = MessageBox.Show("O Won!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
@@ -559,7 +593,7 @@ namespace Tic_Tac_Toe_Game
             tmr1.Interval = 1000;
             Global.tmrCounter = (byte)(1 + Global.tmrCounter);
             txtBox1.Text = "X Turn";
-            prgrssBar1.Visible = lbl1.Visible = btnReset.Visible = btn1_1.Visible = btn1_2.Visible = btn1_3.Visible = btn2_1.Visible = btn2_2.Visible = btn2_3.Visible = btn3_1.Visible = btn3_2.Visible = btn3_3.Visible = true;
+            grpBox1.Visible = txtBoxX.Visible = txtBoxO.Visible = lblXwns.Visible = lblOwns.Visible = prgrssBar1.Visible = lblTimer.Visible = btnReset.Visible = btn1_1.Visible = btn1_2.Visible = btn1_3.Visible = btn2_1.Visible = btn2_2.Visible = btn2_3.Visible = btn3_1.Visible = btn3_2.Visible = btn3_3.Visible = true;
             btnStart.Visible = false;
         }
 
@@ -619,14 +653,39 @@ namespace Tic_Tac_Toe_Game
 
         private void btnRestart_Click(object sender, EventArgs e)
         {
-            prgrssBar1.Value = 100;
-            Global.tmrCounter = 0;
+
             tmr1.Stop();
-            txtBox1.Text = "";
-            btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
-            btnStart.Visible = true;
-            btnReset.Visible = false;
-            prgrssBar1.Visible = lbl1.Visible = btnReset.Visible = btn1_1.Visible = btn1_2.Visible = btn1_3.Visible = btn2_1.Visible = btn2_2.Visible = btn2_3.Visible = btn3_1.Visible = btn3_2.Visible = btn3_3.Visible = false;
+
+            DialogResult result = MessageBox.Show("Are you sure you want to reset the game?\nNote: It will also reset the scoreboard.", "Reset", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+
+                prgrssBar1.Value = 100;
+                Global.tmrCounter = 0;
+                tmr1.Stop();
+                txtBox1.Text = "";
+                btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
+                btnStart.Visible = true;
+                btnReset.Visible = false;
+                txtBoxX.Text = txtBoxO.Text = "0";
+                grpBox1.Visible = txtBoxX.Visible = txtBoxO.Visible = lblXwns.Visible = lblOwns.Visible = prgrssBar1.Visible = lblTimer.Visible = btnReset.Visible = btn1_1.Visible = btn1_2.Visible = btn1_3.Visible = btn2_1.Visible = btn2_2.Visible = btn2_3.Visible = btn3_1.Visible = btn3_2.Visible = btn3_3.Visible = false;
+            }
+            else if (result == DialogResult.No)
+            {
+
+                tmr1.Start();
+            }
+        }
+
+        private void lblXscr_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
