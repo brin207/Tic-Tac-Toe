@@ -353,8 +353,10 @@ namespace Tic_Tac_Toe_Game
             this.Controls.Add(this.btn2_1);
             this.Controls.Add(this.btn1_1);
             this.Controls.Add(this.grpBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TicTacToe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tic-Tac-Toe";
             this.Load += new System.EventHandler(this.TicTacToe_Load);
             this.grpBox1.ResumeLayout(false);
