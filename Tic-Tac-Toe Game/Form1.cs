@@ -663,6 +663,8 @@ namespace Tic_Tac_Toe_Game
 
                 prgrssBar1.Value = 100;
                 Global.tmrCounter = 0;
+                Global.winXCounter = 0;
+                Global.winOCounter = 0;
                 tmr1.Stop();
                 txtBox1.Text = "";
                 btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
