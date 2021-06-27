@@ -212,7 +212,6 @@ namespace Tic_Tac_Toe_Game
             this.prgrssBar1.TabIndex = 9;
             this.prgrssBar1.Value = 100;
             this.prgrssBar1.Visible = false;
-            this.prgrssBar1.Click += new System.EventHandler(this.prgrssBr1_Click);
             // 
             // btnStart
             // 
@@ -328,7 +327,6 @@ namespace Tic_Tac_Toe_Game
             this.grpBox1.TabStop = false;
             this.grpBox1.Text = "Win/s";
             this.grpBox1.Visible = false;
-            this.grpBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // TicTacToe
             // 
@@ -358,7 +356,6 @@ namespace Tic_Tac_Toe_Game
             this.Name = "TicTacToe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tic-Tac-Toe";
-            this.Load += new System.EventHandler(this.TicTacToe_Load);
             this.grpBox1.ResumeLayout(false);
             this.grpBox1.PerformLayout();
             this.ResumeLayout(false);
