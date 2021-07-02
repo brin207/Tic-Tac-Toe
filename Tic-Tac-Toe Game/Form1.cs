@@ -16,9 +16,9 @@ namespace Tic_Tac_Toe_Game
         {
             InitializeComponent();
         }
-            public bool tmrCounter = false;
-            public byte winXCounter = 0;
-            public byte winOCounter = 0;
+            bool tmrCounter = false;
+            byte winXCounter = 0;
+            byte winOCounter = 0;
         public void btnfxn(Button btn)
         {
             if ((btn.Text == "") && (tmrCounter == true))
@@ -503,10 +503,6 @@ namespace Tic_Tac_Toe_Game
                 }
             }
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            System.Windows.Forms.Application.Exit();
-        }
         private void btnStart_Click(object sender, EventArgs e)
         {
             tmr1.Start();
@@ -516,7 +512,7 @@ namespace Tic_Tac_Toe_Game
             grpBox1.Visible = txtBoxX.Visible = txtBoxO.Visible = lblXwns.Visible = lblOwns.Visible = prgrssBar1.Visible = lblTimer.Visible = btnReset.Visible = btn1_1.Visible = btn1_2.Visible = btn1_3.Visible = btn2_1.Visible = btn2_2.Visible = btn2_3.Visible = btn3_1.Visible = btn3_2.Visible = btn3_3.Visible = true;
             btnStart.Visible = false;
         }
-        private void btn1_1_Click(object sender, EventArgs e)
+        private void btn1_1_Click(object sender, EventArgs e) // Row #_Column #
         {
             btnfxn(btn1_1);
         }
@@ -574,6 +570,10 @@ namespace Tic_Tac_Toe_Game
             {
                 tmr1.Start();
             }
+        }
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
         }
     }
 }

@@ -244,7 +244,7 @@ namespace Tic_Tac_Toe_Game
             this.btnQuit.TabIndex = 12;
             this.btnQuit.Text = "Quit";
             this.btnQuit.UseVisualStyleBackColor = true;
-            this.btnQuit.Click += new System.EventHandler(this.button1_Click);
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // btnReset
             // 
