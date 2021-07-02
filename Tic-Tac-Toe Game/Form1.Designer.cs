@@ -297,6 +297,7 @@ namespace Tic_Tac_Toe_Game
             // 
             this.txtBoxX.Location = new System.Drawing.Point(25, 61);
             this.txtBoxX.Name = "txtBoxX";
+            this.txtBoxX.ReadOnly = true;
             this.txtBoxX.Size = new System.Drawing.Size(58, 27);
             this.txtBoxX.TabIndex = 18;
             this.txtBoxX.Text = "0";
@@ -307,6 +308,7 @@ namespace Tic_Tac_Toe_Game
             // 
             this.txtBoxO.Location = new System.Drawing.Point(157, 61);
             this.txtBoxO.Name = "txtBoxO";
+            this.txtBoxO.ReadOnly = true;
             this.txtBoxO.Size = new System.Drawing.Size(58, 27);
             this.txtBoxO.TabIndex = 19;
             this.txtBoxO.Text = "0";
