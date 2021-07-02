@@ -16,22 +16,22 @@ namespace Tic_Tac_Toe_Game
         {
             InitializeComponent();
         }
-            bool tmrCounter = false;
+            bool plyrTurn = false; // false == O, true == X
             byte winXCounter = 0;
             byte winOCounter = 0;
         public void btnfxn(Button btn)
         {
-            if ((btn.Text == "") && (tmrCounter == true))
+            if ((btn.Text == "") && (plyrTurn == true))
             {
                 btn.Text = "X";
-                tmrCounter = !tmrCounter;
+                plyrTurn = !plyrTurn;
                 prgrssBar1.Value = 100;
                 txtBox1.Text = "O Turn";
             }
-            else if ((btn.Text == "") && (tmrCounter == false))
+            else if ((btn.Text == "") && (plyrTurn == false))
             {
                 btn.Text = "O";
-                tmrCounter = !tmrCounter;
+                plyrTurn = !plyrTurn;
                 prgrssBar1.Value = 100;
                 txtBox1.Text = "X Turn";
             }
@@ -42,7 +42,7 @@ namespace Tic_Tac_Toe_Game
                 btn1_1.FlatAppearance.BorderColor = btn1_2.FlatAppearance.BorderColor = btn1_3.FlatAppearance.BorderColor = Color.LightGreen;
                 btn1_1.BackColor = btn1_2.BackColor = btn1_3.BackColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
-                tmrCounter = false;
+                plyrTurn = false;
                 winXCounter++;
                 txtBoxX.Text = winXCounter.ToString();
                 tmr1.Stop();
@@ -54,7 +54,7 @@ namespace Tic_Tac_Toe_Game
                     btn1_1.BackColor = btn1_2.BackColor = btn1_3.BackColor = Color.SteelBlue;
                     btn1_1.FlatAppearance.BorderColor = btn1_2.FlatAppearance.BorderColor = btn1_3.FlatAppearance.BorderColor = Color.SteelBlue;
                     tmr1.Start();
-                    tmrCounter = !tmrCounter;
+                    plyrTurn = !plyrTurn;
                     txtBox1.Text = "X Turn";
 
                 }
@@ -69,7 +69,7 @@ namespace Tic_Tac_Toe_Game
                 btn2_1.BackColor = btn2_2.BackColor = btn2_3.BackColor = Color.LightGreen;
                 btn2_1.FlatAppearance.BorderColor = btn2_2.FlatAppearance.BorderColor = btn2_3.FlatAppearance.BorderColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
-                tmrCounter = false;
+                plyrTurn = false;
                 winXCounter++;
                 txtBoxX.Text = winXCounter.ToString();
                 tmr1.Stop();
@@ -81,7 +81,7 @@ namespace Tic_Tac_Toe_Game
                     btn2_1.BackColor = btn2_2.BackColor = btn2_3.BackColor = Color.SteelBlue;
                     btn2_1.FlatAppearance.BorderColor = btn2_2.FlatAppearance.BorderColor = btn2_3.FlatAppearance.BorderColor = Color.SteelBlue;
                     tmr1.Start();
-                    tmrCounter = !tmrCounter;
+                    plyrTurn = !plyrTurn;
                     txtBox1.Text = "X Turn";
                 }
                 else if (result == DialogResult.No)
@@ -95,7 +95,7 @@ namespace Tic_Tac_Toe_Game
                 btn3_1.BackColor = btn3_2.BackColor = btn3_3.BackColor = Color.LightGreen;
                 btn3_1.FlatAppearance.BorderColor = btn3_2.FlatAppearance.BorderColor = btn3_3.FlatAppearance.BorderColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
-                tmrCounter = false;
+                plyrTurn = false;
                 winXCounter++;
                 txtBoxX.Text = winXCounter.ToString();
                 tmr1.Stop();
@@ -107,7 +107,7 @@ namespace Tic_Tac_Toe_Game
                     btn3_1.BackColor = btn3_2.BackColor = btn3_3.BackColor = Color.SteelBlue;
                     btn3_1.FlatAppearance.BorderColor = btn3_2.FlatAppearance.BorderColor = btn3_3.FlatAppearance.BorderColor = Color.SteelBlue;
                     tmr1.Start();
-                    tmrCounter = !tmrCounter;
+                    plyrTurn = !plyrTurn;
                     txtBox1.Text = "X Turn";
                 }
                 else if (result == DialogResult.No)
@@ -121,7 +121,7 @@ namespace Tic_Tac_Toe_Game
                 btn1_1.BackColor = btn2_1.BackColor = btn3_1.BackColor = Color.LightGreen;
                 btn1_1.FlatAppearance.BorderColor = btn2_1.FlatAppearance.BorderColor = btn3_1.FlatAppearance.BorderColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
-                tmrCounter = false;
+                plyrTurn = false;
                 winXCounter++;
                 txtBoxX.Text = winXCounter.ToString();
                 tmr1.Stop();
@@ -133,7 +133,7 @@ namespace Tic_Tac_Toe_Game
                     btn1_1.BackColor = btn2_1.BackColor = btn3_1.BackColor = Color.SteelBlue;
                     btn1_1.FlatAppearance.BorderColor = btn2_1.FlatAppearance.BorderColor = btn3_1.FlatAppearance.BorderColor = Color.SteelBlue;
                     tmr1.Start();
-                    tmrCounter = !tmrCounter;
+                    plyrTurn = !plyrTurn;
                     txtBox1.Text = "X Turn";
                 }
                 else if (result == DialogResult.No)
@@ -147,7 +147,7 @@ namespace Tic_Tac_Toe_Game
                 btn1_2.BackColor = btn2_2.BackColor = btn3_2.BackColor = Color.LightGreen;
                 btn1_2.FlatAppearance.BorderColor = btn2_2.FlatAppearance.BorderColor = btn3_2.FlatAppearance.BorderColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
-                tmrCounter = false;
+                plyrTurn = false;
                 winXCounter++;
                 txtBoxX.Text = winXCounter.ToString();
                 tmr1.Stop();
@@ -159,7 +159,7 @@ namespace Tic_Tac_Toe_Game
                     btn1_2.BackColor = btn2_2.BackColor = btn3_2.BackColor = Color.SteelBlue;
                     btn1_2.FlatAppearance.BorderColor = btn2_2.FlatAppearance.BorderColor = btn3_2.FlatAppearance.BorderColor = Color.SteelBlue;
                     tmr1.Start();
-                    tmrCounter = !tmrCounter;
+                    plyrTurn = !plyrTurn;
                     txtBox1.Text = "X Turn";
                 }
                 else if (result == DialogResult.No)
@@ -173,7 +173,7 @@ namespace Tic_Tac_Toe_Game
                 btn1_3.BackColor = btn2_3.BackColor = btn3_3.BackColor = Color.LightGreen;
                 btn1_3.FlatAppearance.BorderColor = btn2_3.FlatAppearance.BorderColor = btn3_3.FlatAppearance.BorderColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
-                tmrCounter = false;
+                plyrTurn = false;
                 winXCounter++;
                 txtBoxX.Text = winXCounter.ToString();
                 tmr1.Stop();
@@ -185,7 +185,7 @@ namespace Tic_Tac_Toe_Game
                     btn1_3.BackColor = btn2_3.BackColor = btn3_3.BackColor = Color.SteelBlue;
                     btn1_3.FlatAppearance.BorderColor = btn2_3.FlatAppearance.BorderColor = btn3_3.FlatAppearance.BorderColor = Color.SteelBlue;
                     tmr1.Start();
-                    tmrCounter = !tmrCounter;
+                    plyrTurn = !plyrTurn;
                     txtBox1.Text = "X Turn";
                 }
                 else if (result == DialogResult.No)
@@ -199,7 +199,7 @@ namespace Tic_Tac_Toe_Game
                 btn1_1.BackColor = btn2_2.BackColor = btn3_3.BackColor = Color.LightGreen;
                 btn1_1.FlatAppearance.BorderColor = btn2_2.FlatAppearance.BorderColor = btn3_3.FlatAppearance.BorderColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
-                tmrCounter = false;
+                plyrTurn = false;
                 winXCounter++;
                 txtBoxX.Text = winXCounter.ToString();
                 tmr1.Stop();
@@ -211,7 +211,7 @@ namespace Tic_Tac_Toe_Game
                     btn1_1.BackColor = btn2_2.BackColor = btn3_3.BackColor = Color.SteelBlue;
                     btn1_1.FlatAppearance.BorderColor = btn2_2.FlatAppearance.BorderColor = btn3_3.FlatAppearance.BorderColor = Color.SteelBlue;
                     tmr1.Start();
-                    tmrCounter = !tmrCounter;
+                    plyrTurn = !plyrTurn;
                     txtBox1.Text = "X Turn";
                 }
                 else if (result == DialogResult.No)
@@ -225,7 +225,7 @@ namespace Tic_Tac_Toe_Game
                 btn1_3.BackColor = btn2_2.BackColor = btn3_1.BackColor = Color.LightGreen;
                 btn1_3.FlatAppearance.BorderColor = btn2_2.FlatAppearance.BorderColor = btn3_1.FlatAppearance.BorderColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
-                tmrCounter = false;
+                plyrTurn = false;
                 winXCounter++;
                 txtBoxX.Text = winXCounter.ToString();
                 tmr1.Stop();
@@ -237,7 +237,7 @@ namespace Tic_Tac_Toe_Game
                     btn1_3.BackColor = btn2_2.BackColor = btn3_1.BackColor = Color.SteelBlue;
                     btn1_3.FlatAppearance.BorderColor = btn2_2.FlatAppearance.BorderColor = btn3_1.FlatAppearance.BorderColor = Color.SteelBlue;
                     tmr1.Start();
-                    tmrCounter = !tmrCounter;
+                    plyrTurn = !plyrTurn;
                     txtBox1.Text = "X Turn";
                 }
                 else if (result == DialogResult.No)
@@ -251,7 +251,7 @@ namespace Tic_Tac_Toe_Game
                 btn1_1.FlatAppearance.BorderColor = btn1_2.FlatAppearance.BorderColor = btn1_3.FlatAppearance.BorderColor = Color.LightGreen;
                 btn1_1.BackColor = btn1_2.BackColor = btn1_3.BackColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
-                tmrCounter = false;
+                plyrTurn = false;
                 winOCounter++;
                 txtBoxO.Text = winOCounter.ToString();
                 tmr1.Stop();
@@ -263,7 +263,7 @@ namespace Tic_Tac_Toe_Game
                     btn1_1.FlatAppearance.BorderColor = btn1_2.FlatAppearance.BorderColor = btn1_3.FlatAppearance.BorderColor = Color.SteelBlue;
                     btn1_1.BackColor = btn1_2.BackColor = btn1_3.BackColor = Color.SteelBlue;
                     tmr1.Start();
-                    tmrCounter = !tmrCounter;
+                    plyrTurn = !plyrTurn;
                     txtBox1.Text = "X Turn";
                 }
                 else if (result == DialogResult.No)
@@ -277,7 +277,7 @@ namespace Tic_Tac_Toe_Game
                 btn2_1.BackColor = btn2_2.BackColor = btn2_3.BackColor = Color.LightGreen;
                 btn2_1.FlatAppearance.BorderColor = btn2_2.FlatAppearance.BorderColor = btn2_3.FlatAppearance.BorderColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
-                tmrCounter = false;
+                plyrTurn = false;
                 winOCounter++;
                 txtBoxO.Text = winOCounter.ToString();
                 tmr1.Stop();
@@ -289,7 +289,7 @@ namespace Tic_Tac_Toe_Game
                     btn2_1.BackColor = btn2_2.BackColor = btn2_3.BackColor = Color.SteelBlue;
                     btn2_1.FlatAppearance.BorderColor = btn2_2.FlatAppearance.BorderColor = btn2_3.FlatAppearance.BorderColor = Color.SteelBlue;
                     tmr1.Start();
-                    tmrCounter = !tmrCounter;
+                    plyrTurn = !plyrTurn;
                     txtBox1.Text = "X Turn";
                 }
                 else if (result == DialogResult.No)
@@ -303,7 +303,7 @@ namespace Tic_Tac_Toe_Game
                 btn3_1.BackColor = btn3_2.BackColor = btn3_3.BackColor = Color.LightGreen;
                 btn3_1.FlatAppearance.BorderColor = btn3_2.FlatAppearance.BorderColor = btn3_3.FlatAppearance.BorderColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
-                tmrCounter = false;
+                plyrTurn = false;
                 winOCounter++;
                 txtBoxO.Text = winOCounter.ToString();
                 tmr1.Stop();
@@ -315,7 +315,7 @@ namespace Tic_Tac_Toe_Game
                     btn3_1.BackColor = btn3_2.BackColor = btn3_3.BackColor = Color.SteelBlue;
                     btn3_1.FlatAppearance.BorderColor = btn3_2.FlatAppearance.BorderColor = btn3_3.FlatAppearance.BorderColor = Color.SteelBlue;
                     tmr1.Start();
-                    tmrCounter = !tmrCounter;
+                    plyrTurn = !plyrTurn;
                     txtBox1.Text = "X Turn";
                 }
                 else if (result == DialogResult.No)
@@ -329,7 +329,7 @@ namespace Tic_Tac_Toe_Game
                 btn1_1.BackColor = btn2_1.BackColor = btn3_1.BackColor = Color.LightGreen;
                 btn1_1.FlatAppearance.BorderColor = btn2_1.FlatAppearance.BorderColor = btn3_1.FlatAppearance.BorderColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
-                tmrCounter = false;
+                plyrTurn = false;
                 winOCounter++;
                 txtBoxO.Text = winOCounter.ToString();
                 tmr1.Stop();
@@ -341,7 +341,7 @@ namespace Tic_Tac_Toe_Game
                     btn1_1.BackColor = btn2_1.BackColor = btn3_1.BackColor = Color.SteelBlue;
                     btn1_1.FlatAppearance.BorderColor = btn2_1.FlatAppearance.BorderColor = btn3_1.FlatAppearance.BorderColor = Color.SteelBlue;
                     tmr1.Start();
-                    tmrCounter = !tmrCounter;
+                    plyrTurn = !plyrTurn;
                     txtBox1.Text = "X Turn";
                 }
                 else if (result == DialogResult.No)
@@ -355,7 +355,7 @@ namespace Tic_Tac_Toe_Game
                 btn1_2.BackColor = btn2_2.BackColor = btn3_2.BackColor = Color.LightGreen;
                 btn1_2.FlatAppearance.BorderColor = btn2_2.FlatAppearance.BorderColor = btn3_2.FlatAppearance.BorderColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
-                tmrCounter = false;
+                plyrTurn = false;
                 winOCounter++;
                 txtBoxO.Text = winOCounter.ToString();
                 tmr1.Stop();
@@ -367,7 +367,7 @@ namespace Tic_Tac_Toe_Game
                     btn1_2.BackColor = btn2_2.BackColor = btn3_2.BackColor = Color.SteelBlue;
                     btn1_2.FlatAppearance.BorderColor = btn2_2.FlatAppearance.BorderColor = btn3_2.FlatAppearance.BorderColor = Color.SteelBlue;
                     tmr1.Start();
-                    tmrCounter = !tmrCounter;
+                    plyrTurn = !plyrTurn;
                     txtBox1.Text = "X Turn";
                 }
                 else if (result == DialogResult.No)
@@ -381,7 +381,7 @@ namespace Tic_Tac_Toe_Game
                 btn1_3.BackColor = btn2_3.BackColor = btn3_3.BackColor = Color.LightGreen;
                 btn1_3.FlatAppearance.BorderColor = btn2_3.FlatAppearance.BorderColor = btn3_3.FlatAppearance.BorderColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
-                tmrCounter = false;
+                plyrTurn = false;
                 winOCounter++;
                 txtBoxO.Text = winOCounter.ToString();
                 tmr1.Stop();
@@ -393,7 +393,7 @@ namespace Tic_Tac_Toe_Game
                     btn1_3.BackColor = btn2_3.BackColor = btn3_3.BackColor = Color.SteelBlue;
                     btn1_3.FlatAppearance.BorderColor = btn2_3.FlatAppearance.BorderColor = btn3_3.FlatAppearance.BorderColor = Color.SteelBlue;
                     tmr1.Start();
-                    tmrCounter = !tmrCounter;
+                    plyrTurn = !plyrTurn;
                     txtBox1.Text = "X Turn";
                 }
                 else if (result == DialogResult.No)
@@ -407,7 +407,7 @@ namespace Tic_Tac_Toe_Game
                 btn1_1.BackColor = btn2_2.BackColor = btn3_3.BackColor = Color.LightGreen;
                 btn1_1.FlatAppearance.BorderColor = btn2_2.FlatAppearance.BorderColor = btn3_3.FlatAppearance.BorderColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
-                tmrCounter = false;
+                plyrTurn = false;
                 winOCounter++;
                 txtBoxO.Text = winOCounter.ToString();
                 tmr1.Stop();
@@ -419,7 +419,7 @@ namespace Tic_Tac_Toe_Game
                     btn1_1.BackColor = btn2_2.BackColor = btn3_3.BackColor = Color.SteelBlue;
                     btn1_1.FlatAppearance.BorderColor = btn2_2.FlatAppearance.BorderColor = btn3_3.FlatAppearance.BorderColor = Color.SteelBlue;
                     tmr1.Start();
-                    tmrCounter = !tmrCounter;
+                    plyrTurn = !plyrTurn;
                     txtBox1.Text = "X Turn";
                 }
                 else if (result == DialogResult.No)
@@ -433,7 +433,7 @@ namespace Tic_Tac_Toe_Game
                 btn1_3.BackColor = btn2_2.BackColor = btn3_1.BackColor = Color.LightGreen;
                 btn1_3.FlatAppearance.BorderColor = btn2_2.FlatAppearance.BorderColor = btn3_1.FlatAppearance.BorderColor = Color.LightGreen;
                 prgrssBar1.Value = 100;
-                tmrCounter = false;
+                plyrTurn = false;
                 winOCounter++;
                 txtBoxO.Text = winOCounter.ToString();
                 tmr1.Stop();
@@ -445,7 +445,7 @@ namespace Tic_Tac_Toe_Game
                     btn1_3.BackColor = btn2_2.BackColor = btn3_1.BackColor = Color.SteelBlue;
                     btn1_3.FlatAppearance.BorderColor = btn2_2.FlatAppearance.BorderColor = btn3_1.FlatAppearance.BorderColor = Color.SteelBlue;
                     tmr1.Start();
-                    tmrCounter = !tmrCounter;
+                    plyrTurn = !plyrTurn;
                     txtBox1.Text = "X Turn";
                 }
                 else if (result == DialogResult.No)
@@ -463,7 +463,7 @@ namespace Tic_Tac_Toe_Game
             {
                 txtBox1.Text = "X/O Draw!";
                 prgrssBar1.Value = 100;
-                tmrCounter = false;
+                plyrTurn = false;
                 tmr1.Stop();
                 DialogResult result = MessageBox.Show("X/O Draw!\nPlay Again?", "Result", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
@@ -471,7 +471,7 @@ namespace Tic_Tac_Toe_Game
                     txtBox1.Text = "";
                     btn1_1.Text = btn1_2.Text = btn1_3.Text = btn2_1.Text = btn2_2.Text = btn2_3.Text = btn3_1.Text = btn3_2.Text = btn3_3.Text = "";
                     tmr1.Start();
-                    tmrCounter = !tmrCounter;
+                    plyrTurn = !plyrTurn;
                     txtBox1.Text = "X Turn";
                 }
                 else if (result == DialogResult.No)
@@ -491,13 +491,13 @@ namespace Tic_Tac_Toe_Game
                 tmr1.Stop();
                 DialogResult result = MessageBox.Show("Time is up!");
                 if (result == DialogResult.OK){
-                    tmrCounter = !tmrCounter;
+                    plyrTurn = !plyrTurn;
                     tmr1.Start();
-                    if (tmrCounter == true)
+                    if (plyrTurn == true)
                     {
                         txtBox1.Text = "X Turn";
                     }
-                    else if (tmrCounter == false){
+                    else if (plyrTurn == false){
                         txtBox1.Text = "O Turn";
                     }
                 }
@@ -507,7 +507,7 @@ namespace Tic_Tac_Toe_Game
         {
             tmr1.Start();
             tmr1.Interval = 1000;
-            tmrCounter = true;
+            plyrTurn = true;
             txtBox1.Text = "X Turn";
             grpBox1.Visible = txtBoxX.Visible = txtBoxO.Visible = lblXwns.Visible = lblOwns.Visible = prgrssBar1.Visible = lblTimer.Visible = btnReset.Visible = btn1_1.Visible = btn1_2.Visible = btn1_3.Visible = btn2_1.Visible = btn2_2.Visible = btn2_3.Visible = btn3_1.Visible = btn3_2.Visible = btn3_3.Visible = true;
             btnStart.Visible = false;
@@ -555,7 +555,7 @@ namespace Tic_Tac_Toe_Game
             if (result == DialogResult.Yes)
             {
                 prgrssBar1.Value = 100;
-                tmrCounter = false;
+                plyrTurn = false;
                 winXCounter = 0;
                 winOCounter = 0;
                 tmr1.Stop();
